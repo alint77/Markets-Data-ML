@@ -3,13 +3,13 @@ import numpy as np
 
 def thread_function(df, threadidx, CandlesInDay,):
 
-    takeProfitPoints = 1.002
-    stopLoss = 0.998
+    takeProfitPoints = 1.0015
+    stopLoss = 0.9985
 
     startCandleHour = 4
     startCandleIndex = int(startCandleHour * CandlesInDay) // 24
 
-    windowLengthHour = 17
+    windowLengthHour = 16
     windowLengthCount = int(windowLengthHour * CandlesInDay) // 24
 
     dataLengthHour = 3
@@ -18,7 +18,7 @@ def thread_function(df, threadidx, CandlesInDay,):
     # labelStartCandleHour = startCandleHour+windowLengthHour
     # labelStartCandleIndex = int(labelStartCandleHour * CandlesInDay) // 24
 
-    labelWindowLengthHour = 2
+    labelWindowLengthHour = 1
     labelWindowLengthCount = int(labelWindowLengthHour * CandlesInDay) // 24
 
     trainNps = []
